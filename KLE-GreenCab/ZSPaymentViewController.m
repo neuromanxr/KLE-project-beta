@@ -9,7 +9,6 @@
 #import "ZSTipsControl.h"
 #import "ZSStarRatingView.h"
 #import "ZSStarRatingControl.h"
-#import "DLStarRatingControl.h"
 #import "ZSPaymentViewController.h"
 
 @interface ZSPaymentViewController () <ZSStarRatingDelegate, ZSTipsDelegate>
@@ -37,6 +36,7 @@
     [self.view addSubview:self.ratingControl];
     
     self.ratingControl.delegate = self;
+    self.tipsControl.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,11 +47,15 @@
 - (void)tipValue
 {
     NSLog(@"TIP VALUE IN PVC %@", self.tipsControl.selectedTipValue);
+    if (self.tipsControl.selectedTipValue != nil) {
+        self.tipAmount.text = self.tipsControl.selectedTipValue;
+    }
 }
 
 - (void)tipAdded:(float)amount
 {
     // delegate method
+    NSLog(@"TIP AMOUNT %@", self.tipsControl.selectedTipValue);
 }
 
 - (void)dismissPaymentView

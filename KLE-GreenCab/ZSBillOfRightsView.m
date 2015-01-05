@@ -86,9 +86,6 @@
     line.path = path;
     [self.layer addSublayer:line];
     
-    self.TLCLicenseFront.image = [UIImage imageNamed:@"license_1.png"];
-    self.TLCLicenseBack.image = [UIImage imageNamed:@"license_2.png"];
-    
     _billOfRightsArray = @[@"Ride in a car that is clean, in good condition, and has passed off all required inspections",
                            @"Be driven by a TLC-licensed driver in good standing whose license is clearly displayed",
                            @"A safe and courteous driver who obeys all traffic laws",

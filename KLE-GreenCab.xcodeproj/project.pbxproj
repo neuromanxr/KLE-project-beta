@@ -20,7 +20,6 @@
 		50B8799E1A428B1B00BCEBAD /* KLE_GreenCabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B8799D1A428B1B00BCEBAD /* KLE_GreenCabTests.m */; };
 		50B879AA1A42907D00BCEBAD /* ZSRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879A81A42907D00BCEBAD /* ZSRideViewController.m */; };
 		50B879AB1A42907D00BCEBAD /* ZSRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B879A91A42907D00BCEBAD /* ZSRideViewController.xib */; };
-		50B879AE1A42914300BCEBAD /* ZSMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879AD1A42914300BCEBAD /* ZSMapAnnotation.m */; };
 		50B879B21A4294AE00BCEBAD /* ZSBillOfRightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879B01A4294AE00BCEBAD /* ZSBillOfRightsViewController.m */; };
 		50B879B61A43CEFF00BCEBAD /* ZSBillOfRightsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879B51A43CEFF00BCEBAD /* ZSBillOfRightsView.m */; };
 		50B879B81A43E3B500BCEBAD /* ZSBillOfRightsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B879B71A43E3B500BCEBAD /* ZSBillOfRightsView.xib */; };
@@ -55,6 +54,7 @@
 		50B87A121A4B8F1500BCEBAD /* ZSTipButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B87A111A4B8F1500BCEBAD /* ZSTipButton.m */; };
 		50B87A171A4BB0BD00BCEBAD /* star_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B87A151A4BB0BD00BCEBAD /* star_highlighted@2x.png */; };
 		50B87A181A4BB0BD00BCEBAD /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B87A161A4BB0BD00BCEBAD /* star@2x.png */; };
+		50E7C2BF1A5B3F9E00565210 /* ZSMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E7C2BE1A5B3F9E00565210 /* ZSMapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +92,6 @@
 		50B879A71A42907D00BCEBAD /* ZSRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSRideViewController.h; sourceTree = "<group>"; };
 		50B879A81A42907D00BCEBAD /* ZSRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSRideViewController.m; sourceTree = "<group>"; };
 		50B879A91A42907D00BCEBAD /* ZSRideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSRideViewController.xib; sourceTree = "<group>"; };
-		50B879AC1A42914300BCEBAD /* ZSMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMapAnnotation.h; sourceTree = "<group>"; };
-		50B879AD1A42914300BCEBAD /* ZSMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMapAnnotation.m; sourceTree = "<group>"; };
 		50B879AF1A4294AE00BCEBAD /* ZSBillOfRightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSBillOfRightsViewController.h; sourceTree = "<group>"; };
 		50B879B01A4294AE00BCEBAD /* ZSBillOfRightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSBillOfRightsViewController.m; sourceTree = "<group>"; };
 		50B879B41A43CEFF00BCEBAD /* ZSBillOfRightsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSBillOfRightsView.h; sourceTree = "<group>"; };
@@ -144,6 +142,8 @@
 		50B87A111A4B8F1500BCEBAD /* ZSTipButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTipButton.m; sourceTree = "<group>"; };
 		50B87A151A4BB0BD00BCEBAD /* star_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_highlighted@2x.png"; sourceTree = "<group>"; };
 		50B87A161A4BB0BD00BCEBAD /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		50E7C2BD1A5B3F9E00565210 /* ZSMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSMapAnnotation.h; sourceTree = "<group>"; };
+		50E7C2BE1A5B3F9E00565210 /* ZSMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSMapAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,8 @@
 				50B879881A428B1B00BCEBAD /* ViewController.h */,
 				50B879891A428B1B00BCEBAD /* ViewController.m */,
 				50B8798B1A428B1B00BCEBAD /* Main.storyboard */,
-				50B879AC1A42914300BCEBAD /* ZSMapAnnotation.h */,
-				50B879AD1A42914300BCEBAD /* ZSMapAnnotation.m */,
+				50E7C2BD1A5B3F9E00565210 /* ZSMapAnnotation.h */,
+				50E7C2BE1A5B3F9E00565210 /* ZSMapAnnotation.m */,
 				50B879A71A42907D00BCEBAD /* ZSRideViewController.h */,
 				50B879A81A42907D00BCEBAD /* ZSRideViewController.m */,
 				50B879A91A42907D00BCEBAD /* ZSRideViewController.xib */,
@@ -224,10 +224,7 @@
 				50B87A0E1A4B8ED300BCEBAD /* ZSTipsControl.m */,
 				50B87A101A4B8F1500BCEBAD /* ZSTipButton.h */,
 				50B87A111A4B8F1500BCEBAD /* ZSTipButton.m */,
-				50B879F41A4A535400BCEBAD /* DLStarRating */,
 				50B879D91A4920A100BCEBAD /* MCPanelViewController */,
-				50B8798E1A428B1B00BCEBAD /* Images.xcassets */,
-				50B879901A428B1B00BCEBAD /* LaunchScreen.xib */,
 				50B879BC1A46D8E500BCEBAD /* taxi&limo.png */,
 				50B879BD1A46D8E500BCEBAD /* logo_white-full.png */,
 				50B879BE1A46D8E500BCEBAD /* logo_white.png */,
@@ -237,6 +234,9 @@
 				50B879C71A46D8F200BCEBAD /* license_2.png */,
 				50B879CD1A47BB8E00BCEBAD /* Screen Shot 2014-12-21 at 9.37.43 PM.png */,
 				50B879CE1A47BB8E00BCEBAD /* Screen Shot 2014-12-21 at 9.37.18 PM.png */,
+				50B8798E1A428B1B00BCEBAD /* Images.xcassets */,
+				50B879901A428B1B00BCEBAD /* LaunchScreen.xib */,
+				50B879F41A4A535400BCEBAD /* DLStarRating */,
 				50B879811A428B1B00BCEBAD /* Supporting Files */,
 			);
 			path = "KLE-GreenCab";
@@ -442,10 +442,10 @@
 				50B879E51A4920A200BCEBAD /* UIView+MCAdditions.m in Sources */,
 				50B87A0A1A4A535500BCEBAD /* UIView+Subviews.m in Sources */,
 				50B879D31A48F43100BCEBAD /* ZSPaymentViewController.m in Sources */,
+				50E7C2BF1A5B3F9E00565210 /* ZSMapAnnotation.m in Sources */,
 				50B879E21A4920A200BCEBAD /* MCPanelViewController.m in Sources */,
 				50B879F31A4A4C9D00BCEBAD /* ZSStarRatingControl.m in Sources */,
 				50B879B21A4294AE00BCEBAD /* ZSBillOfRightsViewController.m in Sources */,
-				50B879AE1A42914300BCEBAD /* ZSMapAnnotation.m in Sources */,
 				50B879871A428B1B00BCEBAD /* AppDelegate.m in Sources */,
 				50B879841A428B1B00BCEBAD /* main.m in Sources */,
 				50B879B61A43CEFF00BCEBAD /* ZSBillOfRightsView.m in Sources */,

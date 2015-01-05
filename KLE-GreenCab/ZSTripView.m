@@ -20,10 +20,10 @@
     line.strokeColor = [[UIColor whiteColor] CGColor];
     line.lineWidth = 1.0;
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, nil, 540, 110);
-    CGPathAddLineToPoint(path, nil, 10, 110);
-    CGPathMoveToPoint(path, nil, 540, 540);
-    CGPathAddLineToPoint(path, nil, 10, 540);
+    CGPathMoveToPoint(path, nil, 260, 120);
+    CGPathAddLineToPoint(path, nil, 20, 120);
+    CGPathMoveToPoint(path, nil, 260, 550);
+    CGPathAddLineToPoint(path, nil, 20, 550);
     line.path = path;
     [self.layer addSublayer:line];
 }

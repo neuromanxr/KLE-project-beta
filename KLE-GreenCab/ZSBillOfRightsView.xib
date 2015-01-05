@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSBillOfRightsViewController">
             <connections>
+                <outlet property="TLCLicenseBack" destination="UH6-5c-6eB" id="sQu-16-qkO"/>
+                <outlet property="TLCLicenseFront" destination="D1G-WQ-4JN" id="Z6C-8w-WRN"/>
+                <outlet property="baseLicense" destination="VXw-MW-BJN" id="Zo4-rA-XmB"/>
                 <outlet property="exploreButton" destination="h9X-gy-kBS" id="Tob-a4-wBV"/>
                 <outlet property="view" destination="r1T-o0-HXt" id="7eH-hM-dno"/>
             </connections>
@@ -102,11 +105,6 @@ with any compliments or complaints about your ride.</string>
             <color key="backgroundColor" red="0.036937840871115728" green="0.18943670136616406" blue="0.29036458333333337" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="TLCLicenseBack" destination="UH6-5c-6eB" id="LbB-Qn-FQr"/>
-                <outlet property="TLCLicenseFront" destination="D1G-WQ-4JN" id="AR6-qs-IQi"/>
-                <outlet property="baseLicense" destination="VXw-MW-BJN" id="Smo-Ij-tRd"/>
-            </connections>
             <point key="canvasLocation" x="218" y="198"/>
         </view>
     </objects>

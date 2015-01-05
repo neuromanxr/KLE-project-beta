@@ -12,10 +12,4 @@ IB_DESIGNABLE
 
 @interface ZSBillOfRightsView : UIView
 
-@property (strong, nonatomic) NSString *TLCLicenseFrontImageName;
-@property (strong, nonatomic) NSString *TLCLicenseBackImageName;
-@property (strong, nonatomic) IBOutlet UIImageView *TLCLicenseFront;
-@property (strong, nonatomic) IBOutlet UIImageView *TLCLicenseBack;
-@property (strong, nonatomic) IBOutlet UILabel *baseLicense;
-
 @end

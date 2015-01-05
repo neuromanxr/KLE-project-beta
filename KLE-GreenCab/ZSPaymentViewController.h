@@ -10,8 +10,10 @@
 
 @interface ZSPaymentViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *tipAmount;
 @property (strong, nonatomic) IBOutlet UILabel *basicFareAmount;
 @property (strong, nonatomic) IBOutlet UILabel *totalFareAmount;
 @property (strong, nonatomic) IBOutlet UILabel *travelTime;
+@property (strong, nonatomic) IBOutlet UILabel *customerEmail;
 
 @end

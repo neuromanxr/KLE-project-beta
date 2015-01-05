@@ -7,8 +7,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSPaymentViewController">
             <connections>
                 <outlet property="basicFareAmount" destination="7W5-Ff-kQQ" id="4xq-NP-Usg"/>
+                <outlet property="customerEmail" destination="hmc-uv-JFJ" id="MGk-sZ-3Et"/>
                 <outlet property="payButton" destination="QaQ-nL-t44" id="7b0-Wo-yzo"/>
                 <outlet property="rateLabel" destination="L0z-86-SYh" id="gnp-AY-VKO"/>
+                <outlet property="tipAmount" destination="ckx-oV-UAL" id="bl2-L4-hj8"/>
                 <outlet property="tipsControl" destination="JmW-kN-8NS" id="HGE-A0-RS9"/>
                 <outlet property="totalFareAmount" destination="vQR-oq-Hif" id="EFZ-ty-mLk"/>
                 <outlet property="travelTime" destination="mUT-Cj-j0u" id="yTM-1o-arw"/>

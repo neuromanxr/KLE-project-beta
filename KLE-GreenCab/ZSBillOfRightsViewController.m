@@ -21,6 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.exploreButton addTarget:self action:@selector(explore) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.TLCLicenseFront.image = [UIImage imageNamed:@"license_1.png"];
+    self.TLCLicenseBack.image = [UIImage imageNamed:@"license_2.png"];
 }
 
 - (void)didReceiveMemoryWarning {

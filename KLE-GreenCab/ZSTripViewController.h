@@ -10,4 +10,9 @@
 
 @interface ZSTripViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *arrivalEstimate;
+@property (strong, nonatomic) IBOutlet UILabel *clock;
+@property (strong, nonatomic) IBOutlet UILabel *originAddress;
+@property (strong, nonatomic) IBOutlet UILabel *destinationAddress;
+
 @end
