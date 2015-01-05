@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		500DC3651A57CD53009B20E9 /* ZSTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3631A57CD53009B20E9 /* ZSTripViewController.m */; };
-		500DC3661A57CD53009B20E9 /* ZSTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500DC3641A57CD53009B20E9 /* ZSTripViewController.xib */; };
 		50486B861A5516C500980951 /* ZSPayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50486B851A5516C500980951 /* ZSPayButton.m */; };
+		5098BFE31A5A2464003E4059 /* ZSTripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5098BFE21A5A2464003E4059 /* ZSTripView.xib */; };
+		5098BFE61A5A26A3003E4059 /* ZSTripView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098BFE51A5A26A3003E4059 /* ZSTripView.m */; };
 		50B879841A428B1B00BCEBAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879831A428B1B00BCEBAD /* main.m */; };
 		50B879871A428B1B00BCEBAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879861A428B1B00BCEBAD /* AppDelegate.m */; };
 		50B8798A1A428B1B00BCEBAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879891A428B1B00BCEBAD /* ViewController.m */; };
@@ -69,10 +70,12 @@
 /* Begin PBXFileReference section */
 		500DC3621A57CD53009B20E9 /* ZSTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSTripViewController.h; sourceTree = "<group>"; };
 		500DC3631A57CD53009B20E9 /* ZSTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTripViewController.m; sourceTree = "<group>"; };
-		500DC3641A57CD53009B20E9 /* ZSTripViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSTripViewController.xib; sourceTree = "<group>"; };
 		500DC3671A5A1DA6009B20E9 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		50486B841A5516C500980951 /* ZSPayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPayButton.h; sourceTree = "<group>"; };
 		50486B851A5516C500980951 /* ZSPayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPayButton.m; sourceTree = "<group>"; };
+		5098BFE21A5A2464003E4059 /* ZSTripView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSTripView.xib; sourceTree = "<group>"; };
+		5098BFE41A5A26A3003E4059 /* ZSTripView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSTripView.h; sourceTree = "<group>"; };
+		5098BFE51A5A26A3003E4059 /* ZSTripView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTripView.m; sourceTree = "<group>"; };
 		50B8797E1A428B1B00BCEBAD /* KLE-GreenCab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KLE-GreenCab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B879821A428B1B00BCEBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B879831A428B1B00BCEBAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -195,7 +198,9 @@
 				50B879A91A42907D00BCEBAD /* ZSRideViewController.xib */,
 				500DC3621A57CD53009B20E9 /* ZSTripViewController.h */,
 				500DC3631A57CD53009B20E9 /* ZSTripViewController.m */,
-				500DC3641A57CD53009B20E9 /* ZSTripViewController.xib */,
+				5098BFE41A5A26A3003E4059 /* ZSTripView.h */,
+				5098BFE51A5A26A3003E4059 /* ZSTripView.m */,
+				5098BFE21A5A2464003E4059 /* ZSTripView.xib */,
 				50B879B41A43CEFF00BCEBAD /* ZSBillOfRightsView.h */,
 				50B879B51A43CEFF00BCEBAD /* ZSBillOfRightsView.m */,
 				50B879B71A43E3B500BCEBAD /* ZSBillOfRightsView.xib */,
@@ -391,6 +396,7 @@
 				50B8798D1A428B1B00BCEBAD /* Main.storyboard in Resources */,
 				50B879AB1A42907D00BCEBAD /* ZSRideViewController.xib in Resources */,
 				50B879C31A46D8E500BCEBAD /* logo_white.png in Resources */,
+				5098BFE31A5A2464003E4059 /* ZSTripView.xib in Resources */,
 				50B87A041A4A535500BCEBAD /* star.png in Resources */,
 				50B87A0C1A4B7E4D00BCEBAD /* ZSStarRatingView.xib in Resources */,
 				50B87A061A4A535500BCEBAD /* star_highlighted-darker.png in Resources */,
@@ -403,7 +409,6 @@
 				50B879921A428B1B00BCEBAD /* LaunchScreen.xib in Resources */,
 				50B879C21A46D8E500BCEBAD /* logo_white-full.png in Resources */,
 				50B879D81A490E6800BCEBAD /* ZSPaymentView.xib in Resources */,
-				500DC3661A57CD53009B20E9 /* ZSTripViewController.xib in Resources */,
 				50B87A081A4A535500BCEBAD /* star_highlighted.png in Resources */,
 				50B879C81A46D8F200BCEBAD /* license_1.png in Resources */,
 				50B87A181A4BB0BD00BCEBAD /* star@2x.png in Resources */,
@@ -431,6 +436,7 @@
 				50486B861A5516C500980951 /* ZSPayButton.m in Sources */,
 				50B879CC1A479D7100BCEBAD /* ZSExploreButton.m in Sources */,
 				50B879EE1A4A3C6300BCEBAD /* ZSStarRatingView.m in Sources */,
+				5098BFE61A5A26A3003E4059 /* ZSTripView.m in Sources */,
 				50B879AA1A42907D00BCEBAD /* ZSRideViewController.m in Sources */,
 				50B87A121A4B8F1500BCEBAD /* ZSTipButton.m in Sources */,
 				50B879E51A4920A200BCEBAD /* UIView+MCAdditions.m in Sources */,
