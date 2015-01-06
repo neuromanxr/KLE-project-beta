@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		500DC3651A57CD53009B20E9 /* ZSTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DC3631A57CD53009B20E9 /* ZSTripViewController.m */; };
+		502BB8321A5B642F00A50192 /* ZSBillOfRightsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 502BB8311A5B642F00A50192 /* ZSBillOfRightsView.xib */; };
 		50486B861A5516C500980951 /* ZSPayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50486B851A5516C500980951 /* ZSPayButton.m */; };
 		5098BFE31A5A2464003E4059 /* ZSTripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5098BFE21A5A2464003E4059 /* ZSTripView.xib */; };
 		5098BFE61A5A26A3003E4059 /* ZSTripView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098BFE51A5A26A3003E4059 /* ZSTripView.m */; };
@@ -22,7 +23,6 @@
 		50B879AB1A42907D00BCEBAD /* ZSRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B879A91A42907D00BCEBAD /* ZSRideViewController.xib */; };
 		50B879B21A4294AE00BCEBAD /* ZSBillOfRightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879B01A4294AE00BCEBAD /* ZSBillOfRightsViewController.m */; };
 		50B879B61A43CEFF00BCEBAD /* ZSBillOfRightsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879B51A43CEFF00BCEBAD /* ZSBillOfRightsView.m */; };
-		50B879B81A43E3B500BCEBAD /* ZSBillOfRightsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B879B71A43E3B500BCEBAD /* ZSBillOfRightsView.xib */; };
 		50B879C11A46D8E500BCEBAD /* taxi&limo.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B879BC1A46D8E500BCEBAD /* taxi&limo.png */; };
 		50B879C21A46D8E500BCEBAD /* logo_white-full.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B879BD1A46D8E500BCEBAD /* logo_white-full.png */; };
 		50B879C31A46D8E500BCEBAD /* logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B879BE1A46D8E500BCEBAD /* logo_white.png */; };
@@ -71,6 +71,7 @@
 		500DC3621A57CD53009B20E9 /* ZSTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSTripViewController.h; sourceTree = "<group>"; };
 		500DC3631A57CD53009B20E9 /* ZSTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTripViewController.m; sourceTree = "<group>"; };
 		500DC3671A5A1DA6009B20E9 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		502BB8311A5B642F00A50192 /* ZSBillOfRightsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSBillOfRightsView.xib; sourceTree = "<group>"; };
 		50486B841A5516C500980951 /* ZSPayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSPayButton.h; sourceTree = "<group>"; };
 		50486B851A5516C500980951 /* ZSPayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSPayButton.m; sourceTree = "<group>"; };
 		5098BFE21A5A2464003E4059 /* ZSTripView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSTripView.xib; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		50B879B01A4294AE00BCEBAD /* ZSBillOfRightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSBillOfRightsViewController.m; sourceTree = "<group>"; };
 		50B879B41A43CEFF00BCEBAD /* ZSBillOfRightsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSBillOfRightsView.h; sourceTree = "<group>"; };
 		50B879B51A43CEFF00BCEBAD /* ZSBillOfRightsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSBillOfRightsView.m; sourceTree = "<group>"; };
-		50B879B71A43E3B500BCEBAD /* ZSBillOfRightsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSBillOfRightsView.xib; sourceTree = "<group>"; };
 		50B879BC1A46D8E500BCEBAD /* taxi&limo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taxi&limo.png"; sourceTree = "<group>"; };
 		50B879BD1A46D8E500BCEBAD /* logo_white-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_white-full.png"; sourceTree = "<group>"; };
 		50B879BE1A46D8E500BCEBAD /* logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_white.png; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				5098BFE21A5A2464003E4059 /* ZSTripView.xib */,
 				50B879B41A43CEFF00BCEBAD /* ZSBillOfRightsView.h */,
 				50B879B51A43CEFF00BCEBAD /* ZSBillOfRightsView.m */,
-				50B879B71A43E3B500BCEBAD /* ZSBillOfRightsView.xib */,
+				502BB8311A5B642F00A50192 /* ZSBillOfRightsView.xib */,
 				50B879AF1A4294AE00BCEBAD /* ZSBillOfRightsViewController.h */,
 				50B879B01A4294AE00BCEBAD /* ZSBillOfRightsViewController.m */,
 				50B879CA1A479D7100BCEBAD /* ZSExploreButton.h */,
@@ -402,10 +402,10 @@
 				50B87A061A4A535500BCEBAD /* star_highlighted-darker.png in Resources */,
 				50B87A071A4A535500BCEBAD /* star_highlighted-darker@2x.png in Resources */,
 				50B879C41A46D8E500BCEBAD /* noSmoking.png in Resources */,
-				50B879B81A43E3B500BCEBAD /* ZSBillOfRightsView.xib in Resources */,
 				50B879C51A46D8E500BCEBAD /* seatbelt.png in Resources */,
 				50B879D01A47BB8E00BCEBAD /* Screen Shot 2014-12-21 at 9.37.18 PM.png in Resources */,
 				50B879C11A46D8E500BCEBAD /* taxi&limo.png in Resources */,
+				502BB8321A5B642F00A50192 /* ZSBillOfRightsView.xib in Resources */,
 				50B879921A428B1B00BCEBAD /* LaunchScreen.xib in Resources */,
 				50B879C21A46D8E500BCEBAD /* logo_white-full.png in Resources */,
 				50B879D81A490E6800BCEBAD /* ZSPaymentView.xib in Resources */,
