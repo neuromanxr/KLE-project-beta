@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSRideViewController">
             <connections>
+                <outlet property="billOfRights" destination="FGt-uf-65L" id="yB6-bW-vVE"/>
                 <outlet property="cancelButton" destination="gR3-7N-A5h" id="L32-UH-oLq"/>
                 <outlet property="mapView" destination="FcF-Po-1Tb" id="H98-en-yDV"/>
                 <outlet property="paymentButton" destination="wEJ-Ec-2dV" id="w68-9H-91f"/>
@@ -36,15 +37,21 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-7N-A5h">
-                    <rect key="frame" x="338" y="562" width="54" height="30"/>
-                    <state key="normal" title="Dismiss">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsS-sD-am2">
                     <rect key="frame" x="212" y="562" width="62" height="30"/>
                     <state key="normal" title="Trip View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-uf-65L">
+                    <rect key="frame" x="282" y="562" width="87" height="30"/>
+                    <state key="normal" title="Bill of Rights">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR3-7N-A5h">
+                    <rect key="frame" x="385" y="562" width="54" height="30"/>
+                    <state key="normal" title="Dismiss">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>

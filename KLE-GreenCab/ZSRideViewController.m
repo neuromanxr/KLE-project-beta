@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "MCPanelViewController.h"
+#import "ZSBillOfRightsViewController.h"
 #import "ZSRideViewController.h"
 #import "ZSPaymentViewController.h"
 #import "ZSTripViewController.h"
@@ -52,6 +53,7 @@
     [self.cancelButton addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     [self.paymentButton addTarget:self action:@selector(showPaymentView) forControlEvents:UIControlEventTouchUpInside];
     [self.tripButton addTarget:self action:@selector(showTripView) forControlEvents:UIControlEventTouchUpInside];
+    [self.billOfRights addTarget:self action:@selector(showBORView) forControlEvents:UIControlEventTouchUpInside];
     
 //    [self startStandardUpdates];
     self.mapView.delegate = self;
@@ -111,18 +113,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)updateBlur
-{
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 1.0);
-//    UIGraphicsBeginImageContext(self.view.bounds.size);
-    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-//    viewImage = [viewImage applyLightEffect];
-    UIGraphicsEndImageContext();
-}
+// not used
+//- (void)updateBlur
+//{
+//    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 1.0);
+////    UIGraphicsBeginImageContext(self.view.bounds.size);
+//    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+////    viewImage = [viewImage applyLightEffect];
+//    UIGraphicsEndImageContext();
+//}
 
 - (void)cancel
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)showBORView
+{
+    ZSBillOfRightsViewController *billOfRightsViewController = [[ZSBillOfRightsViewController alloc] init];
+    if (billOfRightsViewController) {
+        [billOfRightsViewController setModalPresentationStyle:UIModalPresentationFormSheet];
+        [billOfRightsViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+        
+        [self presentViewController:billOfRightsViewController animated:YES completion:nil];
+    }
 }
 
 - (void)showTripView
@@ -140,10 +154,17 @@
 - (void)showPaymentView
 {
     ZSPaymentViewController *paymentViewController = [[ZSPaymentViewController alloc] init];
-    if (paymentViewController) {
-        [paymentViewController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-        [paymentViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-        
+    MCPanelViewController *panelController = [[MCPanelViewController alloc] initWithRootViewController:paymentViewController];
+    paymentViewController.preferredContentSize = CGSizeMake(540, 0);
+    panelController.masking = NO;
+    panelController.tintColor = LIGHTBLUEGREEN;
+    panelController.backgroundStyle = MCPanelBackgroundStyleTinted;
+    [panelController presentInViewController:self withDirection:MCPanelAnimationDirectionLeft];
+    
+//    if (paymentViewController) {
+//        [paymentViewController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+//        [paymentViewController setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+    
 //        UIGraphicsBeginImageContext(self.view.bounds.size);
 //        CGContextRef c = UIGraphicsGetCurrentContext();
 //        CGContextTranslateCTM(c, 0, 0);
@@ -151,10 +172,10 @@
 //        UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
 //        viewImage = [viewImage applyLightEffect];
 //        UIGraphicsEndImageContext();
-        [self updateBlur];
-        
-        [self presentViewController:paymentViewController animated:YES completion:nil];
-    }
+//        [self updateBlur];
+    
+//        [self presentViewController:paymentViewController animated:YES completion:nil];
+//    }
 }
 
 /*

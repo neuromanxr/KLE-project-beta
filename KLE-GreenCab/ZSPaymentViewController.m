@@ -5,6 +5,7 @@
 //  Created by Kelvin Lee on 12/22/14.
 //  Copyright (c) 2014 Kelvin. All rights reserved.
 //
+#import "MCPanelViewController.h"
 #import "ZSPayButton.h"
 #import "ZSTipsControl.h"
 #import "ZSStarRatingView.h"
@@ -26,9 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Test
-    [self.tipsControl addTarget:self action:@selector(tipValue) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.payButton addTarget:self action:@selector(dismissPaymentView) forControlEvents:UIControlEventTouchUpInside];
     
     self.ratingControl = [[ZSStarRatingControl alloc] initWithFrame:CGRectMake(0, 370, 180, 50) andStars:5 isFractional:NO];
@@ -44,32 +42,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tipValue
-{
-    NSLog(@"TIP VALUE IN PVC %@", self.tipsControl.selectedTipValue);
-    if (self.tipsControl.selectedTipValue != nil) {
-        self.tipAmount.text = self.tipsControl.selectedTipValue;
-    }
-}
-
-- (void)tipAdded:(float)amount
+- (void)tipAdded:(ZSTipsControl *)control with:(NSString *)amount
 {
     // delegate method
-    NSLog(@"TIP AMOUNT %@", self.tipsControl.selectedTipValue);
+    NSLog(@"DELEGATE TIP VALUE %@", amount);
+    self.tipAmount.text = amount;
 }
 
 - (void)dismissPaymentView
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.panelViewController dismiss];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-//-(void)newRating:(DLStarRatingControl *)control :(float)rating
-//{
-//    self.rateLabel.text = [NSString stringWithFormat:@"Rating: %f", rating];
-//}
 
 - (void)newRating:(ZSStarRatingControl *)control :(float)rating
 {
+    NSLog(@"NEW RATING");
     self.rateLabel.text = [NSString stringWithFormat:@"Rating: %f", rating];
 }
 

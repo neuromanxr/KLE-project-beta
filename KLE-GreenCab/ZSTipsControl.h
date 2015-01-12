@@ -10,16 +10,18 @@
 
 IB_DESIGNABLE
 
-@protocol ZSTipsDelegate <NSObject>
-
-- (void)tipAdded:(float)amount;
-
-@end
+@protocol ZSTipsDelegate;
 
 @interface ZSTipsControl : UIControl
 
 @property (assign, nonatomic) id<ZSTipsDelegate>delegate;
 @property (nonatomic, strong) NSString *selectedTipValue;
 @property (nonatomic, strong) UITextField *textField;
+
+@end
+
+@protocol ZSTipsDelegate
+
+- (void)tipAdded:(ZSTipsControl *)control with:(NSString *)amount;
 
 @end

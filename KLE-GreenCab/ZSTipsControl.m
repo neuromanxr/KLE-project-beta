@@ -10,7 +10,7 @@
 #import "ZSTipButton.h"
 #import "UIView+Subviews.h"
 
-@interface ZSTipsControl () <UITextFieldDelegate>
+@interface ZSTipsControl () <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) ZSTipButton *tipButton;
 @property (nonatomic, strong) NSArray *tipNumbers;
@@ -51,6 +51,7 @@
     CAShapeLayer *mask = [CAShapeLayer layer];
     mask.path = roundedRect.CGPath;
     self.layer.mask = mask;
+    self.alpha = 0.8;
     
     NSInteger buttonXPosition = -1;
     NSInteger buttonYPosition = -1;
@@ -77,6 +78,7 @@
             [self addSubview:self.tipButton];
         }
         buttonXPosition += 102;
+        
         [self.tipButton addTarget:self action:@selector(updateTipValue:) forControlEvents:UIControlEventTouchUpInside];
         
 //        NSLog(@"##TIP BUTTON bounds %@", NSStringFromCGRect(self.tipButton.bounds));
@@ -115,13 +117,13 @@
             [UIView animateWithDuration:0.2f animations:^{
                 tipButton.transform = CGAffineTransformIdentity;
             }];
-            if (tipButton.tag == 5 && self.textField) {
-                [UIView animateWithDuration:0.2f animations:^{
-                    self.textField.frame = CGRectMake(100, 180, 0, 25);
-                } completion:^(BOOL finished) {
-                    self.textField = nil;
-                }];
-            }
+//            if (tipButton.tag == 5 && self.textField) {
+//                [UIView animateWithDuration:0.2f animations:^{
+//                    self.textField.frame = CGRectMake(100, 180, 0, 25);
+//                } completion:^(BOOL finished) {
+//                    self.textField = nil;
+//                }];
+//            }
             NSLog(@"TIP BUTTON STATE %lu", tipButton.state);
         }
     }
@@ -129,16 +131,64 @@
 
 - (void)showTextField
 {
-    if (!self.textField) {
-        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 180, 0, 25)];
-        self.textField.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.textField];
-        [UIView animateWithDuration:0.3f animations:^{
-            self.textField.frame = CGRectMake(100, 180, 75, 25);
-        } completion:^(BOOL finished) {
-            self.textField.delegate = self;
-        }];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Other Amount" message:@"Enter Amount" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    self.textField = [alertView textFieldAtIndex:0];
+    self.textField.keyboardType = UIKeyboardTypeDecimalPad;
+    
+    [alertView show];
+//    if (!self.textField) {
+//        self.textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 180, 0, 25)];
+//        self.textField.backgroundColor = [UIColor whiteColor];
+//        [self addSubview:self.textField];
+//        [UIView animateWithDuration:0.3f animations:^{
+//            self.textField.frame = CGRectMake(100, 180, 75, 25);
+//        } completion:^(BOOL finished) {
+//            self.textField.delegate = self;
+//        }];
+//    }
+}
+
+- (BOOL)validateText:(NSString *)otherAmount
+{
+    NSError *error = NULL;
+    NSString *regexPatternUnlimited = @"^[0-9]+$";
+//    NSString *regexPatternLimited = @"^[0-9]{3}$";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexPatternUnlimited options:NSRegularExpressionCaseInsensitive error:&error];
+    if ([regex numberOfMatchesInString:otherAmount options:0 range:NSMakeRange(0, otherAmount.length)]) {
+        NSLog(@"Success Match");
+        return YES;
     }
+    return NO;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *otherAmount = [[alertView textFieldAtIndex:0] text];
+    if (buttonIndex == 0) {
+        NSLog(@"CANCELLED");
+    } else {
+        NSLog(@"OK %@", otherAmount);
+        // set the tip value in payment view after tapping OK
+        self.selectedTipValue = otherAmount;
+        [self.delegate tipAdded:self with:self.selectedTipValue];
+    }
+}
+
+- (BOOL)alertViewShouldEnableFirstOtherButton:(UIAlertView *)alertView
+{
+    NSString *otherAmount = [[alertView textFieldAtIndex:0] text];
+    if ([self validateText:otherAmount]) {
+        NSLog(@"INPUT OK");
+//        NSAttributedString *attribString = [[NSAttributedString alloc] initWithString:otherAmount attributes:@{ NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:11], NSUnderlineStyleAttributeName : @0, NSBackgroundColorAttributeName : [UIColor clearColor] }];
+//        [alertView textFieldAtIndex:0].attributedText = attribString;
+        [alertView textFieldAtIndex:0].textColor = [UIColor blueColor];
+        return YES;
+    } else {
+        NSLog(@"INVALID INPUT");
+        [alertView textFieldAtIndex:0].textColor = [UIColor redColor];
+    }
+    return NO;
 }
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
@@ -179,6 +229,8 @@
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     [super endTrackingWithTouch:touch withEvent:event];
+    NSLog(@"END TRACKING");
+    [self.delegate tipAdded:self with:self.selectedTipValue];
 }
 
 - (void)cancelTrackingWithEvent:(UIEvent *)event {
@@ -192,12 +244,18 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
+    NSLog(@"DID END EDITING");
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    NSLog(@"TEXTFIELD SHOULD END EDITING");
     return YES;
 }
 

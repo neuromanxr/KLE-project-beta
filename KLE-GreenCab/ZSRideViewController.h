@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) IBOutlet UIButton *tripButton;
+@property (strong, nonatomic) IBOutlet UIButton *billOfRights;
 
 @end
