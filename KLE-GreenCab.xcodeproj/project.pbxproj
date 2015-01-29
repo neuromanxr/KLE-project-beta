@@ -12,6 +12,7 @@
 		50486B861A5516C500980951 /* ZSPayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50486B851A5516C500980951 /* ZSPayButton.m */; };
 		5098BFE31A5A2464003E4059 /* ZSTripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5098BFE21A5A2464003E4059 /* ZSTripView.xib */; };
 		5098BFE61A5A26A3003E4059 /* ZSTripView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5098BFE51A5A26A3003E4059 /* ZSTripView.m */; };
+		50B6AC5D1A7A9D6F00CA7FDA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6AC5C1A7A9D6F00CA7FDA /* MapKit.framework */; };
 		50B879841A428B1B00BCEBAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879831A428B1B00BCEBAD /* main.m */; };
 		50B879871A428B1B00BCEBAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879861A428B1B00BCEBAD /* AppDelegate.m */; };
 		50B8798A1A428B1B00BCEBAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B879891A428B1B00BCEBAD /* ViewController.m */; };
@@ -77,6 +78,7 @@
 		5098BFE21A5A2464003E4059 /* ZSTripView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSTripView.xib; sourceTree = "<group>"; };
 		5098BFE41A5A26A3003E4059 /* ZSTripView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSTripView.h; sourceTree = "<group>"; };
 		5098BFE51A5A26A3003E4059 /* ZSTripView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSTripView.m; sourceTree = "<group>"; };
+		50B6AC5C1A7A9D6F00CA7FDA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		50B8797E1A428B1B00BCEBAD /* KLE-GreenCab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KLE-GreenCab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B879821A428B1B00BCEBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B879831A428B1B00BCEBAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B6AC5D1A7A9D6F00CA7FDA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +170,7 @@
 		50B879751A428B1A00BCEBAD = {
 			isa = PBXGroup;
 			children = (
+				50B6AC5C1A7A9D6F00CA7FDA /* MapKit.framework */,
 				50B879801A428B1B00BCEBAD /* KLE-GreenCab */,
 				50B8799A1A428B1B00BCEBAD /* KLE-GreenCabTests */,
 				50B8797F1A428B1B00BCEBAD /* Products */,
@@ -529,10 +533,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.1;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -565,9 +569,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.1;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -580,6 +584,7 @@
 				INFOPLIST_FILE = "KLE-GreenCab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -590,6 +595,7 @@
 				INFOPLIST_FILE = "KLE-GreenCab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

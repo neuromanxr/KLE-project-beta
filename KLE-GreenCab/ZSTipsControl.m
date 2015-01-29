@@ -152,9 +152,10 @@
 - (BOOL)validateText:(NSString *)otherAmount
 {
     NSError *error = NULL;
-    NSString *regexPatternUnlimited = @"^[0-9]+$";
+//    NSString *regexPatternUnlimited = @"^[0-9]+$";
+    NSString *regexPatternWithDecimals = @"^[0-9]+([.][0-9]{2})?$";
 //    NSString *regexPatternLimited = @"^[0-9]{3}$";
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexPatternUnlimited options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexPatternWithDecimals options:NSRegularExpressionCaseInsensitive error:&error];
     if ([regex numberOfMatchesInString:otherAmount options:0 range:NSMakeRange(0, otherAmount.length)]) {
         NSLog(@"Success Match");
         return YES;
