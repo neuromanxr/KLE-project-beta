@@ -50,9 +50,9 @@
     line.lineWidth = 1.0;
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, nil, 0, 110);
-    CGPathAddLineToPoint(path, nil, 280, 110);
+    CGPathAddLineToPoint(path, nil, 400, 110);
     CGPathMoveToPoint(path, nil, 0, 540);
-    CGPathAddLineToPoint(path, nil, 280, 540);
+    CGPathAddLineToPoint(path, nil, 400, 540);
     line.path = path;
     [self.layer addSublayer:line];
 }
