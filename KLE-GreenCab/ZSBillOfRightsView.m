@@ -66,7 +66,7 @@
     UIColor *circleColor = [UIColor colorWithRed:114/255.0f green:152/255.0f blue:165/255.0f alpha:1.0f];
     UIColor *numberColor = [UIColor colorWithRed:14/255.0f green:109/255.0f blue:133/255.0f alpha:1.0f];
     
-    
+    // left and right gradients
     CAGradientLayer *leftGradient = [CAGradientLayer layer];
     leftGradient.frame = CGRectMake(0, 0, (self.bounds.size.width / 1.85), self.bounds.size.height);
     leftGradient.colors = [NSArray arrayWithObjects:(id)[darkBlueGreen CGColor], (id)[lightBlueGreen CGColor], nil];
@@ -77,6 +77,7 @@
     rightGradient.colors = [NSArray arrayWithObjects:(id)[darkBlueGreenAlt CGColor], (id)[lightBlueGreenAlt CGColor], nil];
     [self.layer insertSublayer:rightGradient atIndex:1];
     
+    // white line
     CAShapeLayer *line = [CAShapeLayer layer];
     line.strokeColor = [[UIColor whiteColor] CGColor];
     line.lineWidth = 1.0;
@@ -86,6 +87,7 @@
     line.path = path;
     [self.layer addSublayer:line];
     
+    // bill of rights
     _billOfRightsArray = @[@"Ride in a car that is clean, in good condition, and has passed off all required inspections",
                            @"Be driven by a TLC-licensed driver in good standing whose license is clearly displayed",
                            @"A safe and courteous driver who obeys all traffic laws",
@@ -98,13 +100,14 @@
                            @"Not share a ride, unless you want to",
                            @"Be accompanied by a service animal"];
     
+    CGSize circleSize = CGSizeMake(30, 30);
     float space = 150.0;
     int numbers = 1;
     for (NSString *right in _billOfRightsArray) {
         CAShapeLayer *circle = [CAShapeLayer layer];
         circle.name = @"circleLayer";
-        circle.bounds = CGRectMake(0, 0, 20, 20);
-        circle.position = CGPointMake(20, space);
+        circle.bounds = CGRectMake(0, 0, circleSize.width, circleSize.height);
+        circle.position = CGPointMake(24, space);
         circle.fillColor = [circleColor CGColor];
         circle.strokeColor = [circleColor CGColor];
         circle.lineWidth = 1.0;
@@ -121,25 +124,25 @@
         
         CATextLayer *numberText = [CATextLayer layer];
         numberText.string = [NSString stringWithFormat:@"%i", numbers];
-        numberText.alignmentMode = @"center";
-        numberText.fontSize = 13.0;
+        numberText.alignmentMode = kCAAlignmentCenter;
+        numberText.fontSize = 16.0;
         numberText.font = (__bridge CFTypeRef)(@"Helvetica");
         numberText.foregroundColor = [darkBlueGreenAlt CGColor];
-        numberText.bounds = CGRectMake(0, 0, 20, 16);
+        numberText.bounds = CGRectMake(0, 0, 20, 20);
         numberText.position = circle.position;
         [self.layer addSublayer:numberText];
         numbers++;
         
         CATextLayer *rights = [CATextLayer layer];
         rights.string = right;
-        rights.alignmentMode = @"left";
-        rights.fontSize = 10.0;
+        rights.alignmentMode = kCAAlignmentLeft;
+        rights.fontSize = 15.0;
         rights.wrapped = YES;
         rights.foregroundColor = [[UIColor whiteColor] CGColor];
-        rights.bounds = CGRectMake(0, 0, 260, 40);
-        rights.position = CGPointMake(170, space + 10);
+        rights.bounds = CGRectMake(0, 0, 360, 50);
+        rights.position = CGPointMake(230, space + 10);
         [self.layer addSublayer:rights];
-        space += 30.0;
+        space += 45.0;
 //        [right drawInRect:CGRectMake(0, space, 250, 500) withAttributes:nil];
     }
 }
